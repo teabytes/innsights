@@ -15,7 +15,7 @@ innsights/
 ├── data/                     # Contains cleaned dataset
 ├── models/                   # Contains FAISS index after generation
 ├── tests/                    # Test queries
-├── report.md                 # Implementation details and challenges
+├── report.md                 # Project report
 ├── requirements.txt          
 └── README.md                 
 ```
