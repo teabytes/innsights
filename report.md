@@ -16,5 +16,6 @@ FastAPI was used to structure the backend due to its simplicity and speed. It pr
 
 ## Challenges
 1. **Optimizing FAISS Index**: Ensuring the FAISS index handled the datasets efficiently required tuning of embedding generation.
-2. **Managing Environment Variables**: Safeguarding Hugging Face API key required the use of environment variables to avoid accidental exposure.
+2. **Managing Environment Variables**: Sensitive API keys for Hugging Face were managed through a .env file to keep them secure.
 3. **Response Time**: Generating embeddings and querying the LLM introduced latency, which required reducing redundant computations and selecting the right model.
+4. **Excluding Large Files from GitHub**: The FAISS index file (bookings_index.faiss) exceeded GitHub’s file size limit of 100MB. Git LFS was initially implemented, but GitHub's size limitations persisted. As a workaround, the FAISS index file was excluded from the repository, and instructions were added to regenerate the index locally after cloning the repo.
