@@ -5,28 +5,31 @@ Innsights is an LLM-Powered Booking Analytics and Q&A System system built to unc
 
 ## Project Structure
 ```
-project-root/
-├── data/
-│   ├── hotel_bookings.csv
-│   └── cleaned_hotel_bookings.csv
-├── models/
-│   └── bookings_index.faiss
-├── src/
-│   ├── api.py
-│   ├── analytics.py
-│   ├── data_processing.py
-│   ├── embeddings.py
-│   └── llm_integration.py
-├── README.md
-└── requirements.txt
+innsights/
+├── src/                      
+│   ├── api.py                # FastAPI backend
+│   ├── analytics.py          # Analytics functions
+│   ├── embeddings.py         # FAISS index creation and search
+│   ├── llm_integration.py    # Hugging Face integration
+│   └── data_processing.py    # Data preprocessing script
+├── data/                     # Contains cleaned dataset
+├── models/                   # Contains FAISS index after generation
+├── tests/                    # Test queries
+├── report.md                 # Implementation details and challenges
+├── requirements.txt          
+└── README.md                 
 ```
 
 ## Setup Instructions
 1. Clone the repository.
+   ```bash
+   git clone https://github.com/teabytes/innsights.git
+   cd innsights
+   ```
 2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On macOS/Linux
+   source venv/bin/activate  # On Linux
    venv\Scripts\activate     # On Windows
    ```
 3. Install dependencies:
@@ -35,7 +38,7 @@ project-root/
    ```
 4. Set the Hugging Face API token:
    ```bash
-   export HUGGINGFACE_TOKEN=your_huggingface_api_token  # On macOS/Linux
+   export HUGGINGFACE_TOKEN=your_huggingface_api_token  # On Linux
    set HUGGINGFACE_TOKEN=your_huggingface_api_token     # On Windows
    ```
 
