@@ -1,1 +1,11 @@
-
+[
+    {
+      "query": "What is the cancellation rate?",
+      "expected_answer": "The cancellation rate is 30.2%."
+    },
+    {
+      "query": "Show me the revenue trends.",
+      "expected_answer": "The monthly revenue shows an upward trend from January to December."
+    }
+  ]
+  
